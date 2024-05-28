@@ -152,6 +152,30 @@ func (list *LinkedList) DeleteFromEnd() {
 	temp.next = nil
 }
 
+// count the list
+func (list *LinkedList) Count() int {
+
+	// check there is any data in linked list
+	if list.IsEmpty() {
+		return 0
+	}
+
+	// initialize the count
+	count := 1
+
+	// temp node to store head
+	temp := list.head
+
+	// loop through the list
+	for temp.next != nil {
+		count++
+		temp = temp.next
+	}
+
+	// return the counter
+	return count
+}
+
 func main() {
 
 	// initialize the linkedlist
@@ -178,6 +202,9 @@ func main() {
 	// display the list
 	linkedList.Display()
 
+	// count the list
+	fmt.Printf("Total nodes in the list are: %d\n", linkedList.Count())
+
 	//delete by value
 	linkedList.DeleteByValue(12)
 	linkedList.DeleteByValue(4)
@@ -196,5 +223,8 @@ func main() {
 
 	// display the list
 	linkedList.Display()
+
+	// count the list
+	fmt.Printf("Total nodes in the list are: %d\n", linkedList.Count())
 
 }
