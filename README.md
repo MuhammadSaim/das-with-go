@@ -11,3 +11,4 @@ This repository contains a simple implementation of a DSA in Go.
 - [Display](./singly-linked-list.go#L54) - Display the entire linked list.
 - [IsEmpty](./singly-linked-list.go#L78) - Check if the list is empty.
 - [DeleteByValue](./singly-linked-list.go#L86) - Delete a node by its value.
+- [DeleteFromStart](./singly-linked-list.go#L110) - Delete a node from the start of the list.

@@ -106,6 +106,26 @@ func (list *LinkedList) DeleteByValue(value int) {
 
 }
 
+// delete the node from the start of the list
+func (list *LinkedList) DeleteFromStart() {
+	// check there is any data in linked list
+	if list.IsEmpty() {
+		fmt.Println("Ooops! There is no data to display. please insert the data.")
+		return
+	}
+
+	// temp node to store head
+	temp := list.head
+
+	// check there is only one node if there is then delete the node
+	if temp.next == nil {
+		list.head = nil
+	}
+
+	// save the next node address to the head
+	list.head = temp.next
+}
+
 func main() {
 
 	// initialize the linkedlist
@@ -129,6 +149,13 @@ func main() {
 	//delete by value
 	linkedList.DeleteByValue(12)
 	linkedList.DeleteByValue(4)
+
+	// display the list
+	linkedList.Display()
+
+	// delete from the start
+	linkedList.DeleteFromStart()
+	linkedList.DeleteFromStart()
 
 	// display the list
 	linkedList.Display()
