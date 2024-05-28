@@ -82,6 +82,30 @@ func (list *LinkedList) IsEmpty() bool {
 	return true
 }
 
+// delete by value delete the node by their value
+func (list *LinkedList) DeleteByValue(value int) {
+
+	// save the head into temp variable
+	current := list.head
+
+	// check if head has a value don't need to loop through
+	if list.head.value == value {
+		list.head = list.head.next
+		return
+	}
+
+	// loop thorugh the linked list and find for a value
+	for current.next != nil && current.next.value != value {
+		current = current.next
+	}
+
+	// delete the found node
+	if current.next != nil {
+		current.next = current.next.next
+	}
+
+}
+
 func main() {
 
 	// initialize the linkedlist
@@ -98,6 +122,13 @@ func main() {
 	linkedList.InsertAtEnd(10)
 	linkedList.InsertAtEnd(12)
 	linkedList.InsertAtEnd(13)
+
+	// display the list
+	linkedList.Display()
+
+	//delete by value
+	linkedList.DeleteByValue(12)
+	linkedList.DeleteByValue(4)
 
 	// display the list
 	linkedList.Display()
