@@ -32,7 +32,7 @@ func (list *LinkedList) InsertAtEnd(value int) {
 	newNode := &Node{value: value}
 
 	// check if the linked list is empty insert the node at the start
-	if list.head == nil {
+	if list.IsEmpty() {
 		list.head = newNode
 		return
 	}
@@ -54,7 +54,7 @@ func (list *LinkedList) InsertAtEnd(value int) {
 func (list *LinkedList) Display() {
 
 	// check there is data or linked list exists
-	if list.head == nil {
+	if list.IsEmpty() {
 		fmt.Println("Ooops! There is no data to display. please insert the data.")
 		return
 	}
@@ -72,6 +72,14 @@ func (list *LinkedList) Display() {
 
 	fmt.Println("nil")
 
+}
+
+// a function check list is empty of not
+func (list *LinkedList) IsEmpty() bool {
+	if list.head != nil {
+		return false
+	}
+	return true
 }
 
 func main() {
