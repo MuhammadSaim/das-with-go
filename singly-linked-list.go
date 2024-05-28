@@ -126,6 +126,32 @@ func (list *LinkedList) DeleteFromStart() {
 	list.head = temp.next
 }
 
+// delete the node from the end of the list
+func (list *LinkedList) DeleteFromEnd() {
+	// check there is any data in linked list
+	if list.IsEmpty() {
+		fmt.Println("Ooops! There is no data to display. please insert the data.")
+		return
+	}
+
+	// check if there is only head
+	if list.head.next == nil {
+		list.head = nil
+		return
+	}
+
+	// temp node to store head
+	temp := list.head
+
+	// loop through the list to reaach the end of the list
+	for temp.next.next != nil {
+		temp = temp.next
+	}
+
+	// delete the node from the end
+	temp.next = nil
+}
+
 func main() {
 
 	// initialize the linkedlist
@@ -142,6 +168,12 @@ func main() {
 	linkedList.InsertAtEnd(10)
 	linkedList.InsertAtEnd(12)
 	linkedList.InsertAtEnd(13)
+	linkedList.InsertAtEnd(15)
+	linkedList.InsertAtEnd(11)
+	linkedList.InsertAtEnd(23)
+	linkedList.InsertAtEnd(14)
+	linkedList.InsertAtEnd(78)
+	linkedList.InsertAtEnd(90)
 
 	// display the list
 	linkedList.Display()
@@ -156,6 +188,11 @@ func main() {
 	// delete from the start
 	linkedList.DeleteFromStart()
 	linkedList.DeleteFromStart()
+
+	// delete from the end
+	linkedList.DeleteFromEnd()
+	linkedList.DeleteFromEnd()
+	linkedList.DeleteFromEnd()
 
 	// display the list
 	linkedList.Display()
