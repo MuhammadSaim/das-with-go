@@ -176,6 +176,47 @@ func (list *LinkedList) Count() int {
 	return count
 }
 
+// reverse the linkedlist
+func (list *LinkedList) Reverse() {
+
+	// check there is any data in linked list
+	if list.IsEmpty() {
+		fmt.Println("Ooops! There is no data to display. please insert the data.")
+		return
+	}
+
+	// current node to store head
+	current := list.head
+
+	// check there is only a head then return the head no need to reverse the list
+	if list.head.next == nil {
+		return
+	}
+
+	// initialize the prev
+	var prev *Node
+
+	for current != nil {
+
+		// store the next node
+		next := current.next
+
+		// save the prev node to the current node
+		current.next = prev
+
+		// move prev to the current node
+		prev = current
+
+		// move temp to next node
+		// for further travercels
+		current = next
+
+	}
+
+	list.head = prev
+
+}
+
 func main() {
 
 	// initialize the linkedlist
@@ -198,6 +239,12 @@ func main() {
 	linkedList.InsertAtEnd(14)
 	linkedList.InsertAtEnd(78)
 	linkedList.InsertAtEnd(90)
+
+	// display the list
+	linkedList.Display()
+
+	// reverse the linkedlist
+	linkedList.Reverse()
 
 	// display the list
 	linkedList.Display()
