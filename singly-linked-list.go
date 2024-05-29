@@ -196,6 +196,7 @@ func (list *LinkedList) Reverse() {
 	// initialize the prev
 	var prev *Node
 
+	// loop through the list
 	for current != nil {
 
 		// store the next node
