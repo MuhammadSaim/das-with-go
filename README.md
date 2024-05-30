@@ -15,3 +15,4 @@ This repository contains a simple implementation of a DSA in Go.
 - [DeleteFromEnd](./singly-linked-list.go#L130) - Delete a node from the end of the list.
 - [Count](./singly-linked-list.go#L156) - Count the node list.
 - [Reverse](./singly-linked-list.go#L180) - Reverse the list.
+- [LinearSearch](./singly-linked-list.go#L222) - Searching in the list with linear search.

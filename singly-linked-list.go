@@ -218,6 +218,43 @@ func (list *LinkedList) Reverse() {
 
 }
 
+// linearly search value into a list
+func (list *LinkedList) LinearSearch(value int) {
+
+	// check there is any data in linked list
+	if list.IsEmpty() {
+		fmt.Println("Ooops! There is no data to display. please insert the data.")
+		return
+	}
+
+	// current node to store head
+	current := list.head
+
+	// found to set initialy false
+	found := false
+
+	// loop through the list
+	for current != nil {
+
+		// check the value in the list
+		if current.value == value {
+			found = true
+		}
+
+		// update the current with the next ndoe for
+		// keep iterating
+		current = current.next
+	}
+
+	// check found is true if it is means we found over value
+	if found {
+		fmt.Printf("%d is found\n", value)
+		return
+	}
+
+	fmt.Printf("%d is not found\n", value)
+}
+
 func main() {
 
 	// initialize the linkedlist
@@ -240,6 +277,10 @@ func main() {
 	linkedList.InsertAtEnd(14)
 	linkedList.InsertAtEnd(78)
 	linkedList.InsertAtEnd(90)
+
+	// linear search
+	linkedList.LinearSearch(12)
+	linkedList.LinearSearch(190)
 
 	// display the list
 	linkedList.Display()
