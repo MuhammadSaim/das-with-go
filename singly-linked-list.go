@@ -233,13 +233,20 @@ func (list *LinkedList) LinearSearch(value int) {
 	// found to set initialy false
 	found := false
 
+	// count the index
+	index := 0
+
 	// loop through the list
 	for current != nil {
 
 		// check the value in the list
 		if current.value == value {
 			found = true
+			break // as soon we found break the loop
 		}
+
+		// update the index to 1 at a time
+		index++
 
 		// update the current with the next ndoe for
 		// keep iterating
@@ -248,7 +255,7 @@ func (list *LinkedList) LinearSearch(value int) {
 
 	// check found is true if it is means we found over value
 	if found {
-		fmt.Printf("%d is found\n", value)
+		fmt.Printf("%d is found at %d index\n", value, index)
 		return
 	}
 
