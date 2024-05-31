@@ -16,3 +16,4 @@ This repository contains a simple implementation of a DSA in Go.
 - [Count](./Linkedlist/singly.go#L156) - Count the node list.
 - [Reverse](./Linkedlist/singly.go#L180) - Reverse the list.
 - [LinearSearch](./Linkedlist/singly.go#L222) - Searching in the list with linear search.
+- [Middle](./Linkedlist/singly.go#L266) - Find the middle of the list.

@@ -262,6 +262,36 @@ func (list *LinkedList) LinearSearch(value int) {
 	fmt.Printf("%d is not found\n", value)
 }
 
+// get the middle element of the list
+func (list *LinkedList) Middle() {
+
+	// check there is any data in linked list
+	if list.IsEmpty() {
+		fmt.Println("Ooops! There is no data to display. please insert the data.")
+		return
+	}
+
+	// create a two varibale which are holding
+	// the head of the list we will talk about laters when we use those
+	slow := list.head
+	fast := list.head
+
+	// loop through the list and find the middle
+	// until fast is null and fast's next node is null
+	for fast != nil && fast.next != nil {
+
+		// now increment the slow 1 time
+		slow = slow.next
+
+		// and for the fast we will increment at 2x
+		// so when fast get the nil slow will be at middle of the list
+		fast = fast.next.next
+	}
+
+	// Now slow is middle just display the value
+	fmt.Printf("Middle of the list is %d\n", slow.value)
+}
+
 func main() {
 
 	// initialize the linkedlist
@@ -284,6 +314,12 @@ func main() {
 	linkedList.InsertAtEnd(14)
 	linkedList.InsertAtEnd(78)
 	linkedList.InsertAtEnd(90)
+
+	// display the list
+	linkedList.Display()
+
+	// middle of the list
+	linkedList.Middle()
 
 	// linear search
 	linkedList.LinearSearch(12)
