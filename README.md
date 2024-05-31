@@ -6,13 +6,13 @@ This repository contains a simple implementation of a DSA in Go.
 
 ### Singly Linked List
 
-- [InsertAtStart](./singly-linked-list.go#L19) - Insert a value at the beginning of the list.
-- [InsertAtEnd](./singly-linked-list.go#L29) - Insert a value at the end of the list.
-- [Display](./singly-linked-list.go#L54) - Display the entire linked list.
-- [IsEmpty](./singly-linked-list.go#L78) - Check if the list is empty.
-- [DeleteByValue](./singly-linked-list.go#L86) - Delete a node by its value.
-- [DeleteFromStart](./singly-linked-list.go#L110) - Delete a node from the start of the list.
-- [DeleteFromEnd](./singly-linked-list.go#L130) - Delete a node from the end of the list.
-- [Count](./singly-linked-list.go#L156) - Count the node list.
-- [Reverse](./singly-linked-list.go#L180) - Reverse the list.
-- [LinearSearch](./singly-linked-list.go#L222) - Searching in the list with linear search.
+- [InsertAtStart](./Linkedlist/singly.go#L19) - Insert a value at the beginning of the list.
+- [InsertAtEnd](./Linkedlist/singly.go#L29) - Insert a value at the end of the list.
+- [Display](./Linkedlist/singly.go#L54) - Display the entire linked list.
+- [IsEmpty](./Linkedlist/singly.go#L78) - Check if the list is empty.
+- [DeleteByValue](./Linkedlist/singly.go#L86) - Delete a node by its value.
+- [DeleteFromStart](./Linkedlist/singly.go#L110) - Delete a node from the start of the list.
+- [DeleteFromEnd](./Linkedlist/singly.go#L130) - Delete a node from the end of the list.
+- [Count](./Linkedlist/singly.go#L156) - Count the node list.
+- [Reverse](./Linkedlist/singly.go#L180) - Reverse the list.
+- [LinearSearch](./Linkedlist/singly.go#L222) - Searching in the list with linear search.
