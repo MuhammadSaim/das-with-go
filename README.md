@@ -19,3 +19,4 @@ This repository contains a simple implementation of a DSA in Go.
 - [Middle](./Linkedlist/singly.go#L266) - Find the middle of the list.
 - [RemoveDuplicate](./Linkedlist/singly.go#L296) - Remove the duplicates from the unsorted list.
 - [Find](./Linkedlist/singly.go#L336) - Find the value by index in list.
+- [IsCycle](./Linkedlist/singly.go#L367) - Detect the cycle in list.

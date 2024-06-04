@@ -363,6 +363,51 @@ func (list *LinkedList) Find(index int) {
 
 }
 
+// detect the cycle in list
+func (list *LinkedList) DetectCycle() {
+
+	// check there is any data in linked list
+	if list.IsEmpty() {
+		fmt.Println("Ooops! There is no data to display. please insert the data.")
+		return
+	}
+
+	// current node to store head
+	current := list.head
+
+	// make hash map for memorization
+	visited := make(map[Node]bool)
+
+	// a flag for check cycle detect
+	found := false
+
+	// loop through the list
+	for current != nil {
+
+		// check current node is in hasmap
+		if visited[*current] {
+			found = true
+		} else {
+			visited[*current] = true
+		}
+
+		// keep looping the variable
+		current = current.next
+	}
+
+	// now check we found the cycle
+	if found {
+
+		fmt.Println("Cycle is detected in the list.")
+
+	} else {
+
+		fmt.Println("There is no cycle in the list.")
+
+	}
+
+}
+
 func main() {
 
 	// initialize the linkedlist
