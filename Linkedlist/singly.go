@@ -490,4 +490,24 @@ func main() {
 	// count the list
 	fmt.Printf("Total nodes in the list are: %d\n", linkedList.Count())
 
+	// delete from the end
+	linkedList.DeleteFromEnd()
+	linkedList.DeleteFromEnd()
+	linkedList.DeleteFromEnd()
+	linkedList.DeleteFromEnd()
+
+	// display the list
+	linkedList.Display()
+
+	// insert at end
+	linkedList.InsertAtEnd(10)
+	linkedList.InsertAtEnd(12)
+	linkedList.InsertAtEnd(13)
+
+	// make the cycle
+	linkedList.head.next.next = linkedList.head
+
+	// check linked list is cycle
+	linkedList.DetectCycle()
+
 }
