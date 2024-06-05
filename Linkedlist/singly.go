@@ -387,6 +387,7 @@ func (list *LinkedList) DetectCycle() {
 		// check current node is in hasmap
 		if visited[*current] {
 			found = true
+			break
 		} else {
 			visited[*current] = true
 		}
