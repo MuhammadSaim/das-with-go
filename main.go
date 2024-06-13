@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/MuhammadSaim/dsa-with-go/linkedlist/doubly"
 	"github.com/MuhammadSaim/dsa-with-go/linkedlist/singly"
 )
 
@@ -104,5 +105,20 @@ func main() {
 
 	// check linked list is cycle
 	linkedList.DetectCycle()
+
+	print("\n\nDoubly Linked List\n\n")
+
+	// doubly linked list
+	doublyLinkedList := &doubly.LinkedList{}
+
+	// display the list
+	doublyLinkedList.Display()
+
+	// insret at start
+	doublyLinkedList.InsertAtStart(4)
+	doublyLinkedList.InsertAtStart(5)
+
+	// display the list
+	doublyLinkedList.Display()
 
 }
