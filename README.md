@@ -24,3 +24,4 @@ This repository contains a simple implementation of a DSA in Go.
 ### Doubly Linked List
 
 - [InsertAtStart](./linkedlist/singly/singly.go#L19) - Insert a value at the beginning of the list.
+- [IsEmpty](./linkedlist/doubly/doubly.go#L64) - Check if the list is empty.
