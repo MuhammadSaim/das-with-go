@@ -64,3 +64,27 @@ func (list *LinkedList) Display() {
 func (list *LinkedList) IsEmpty() bool {
 	return list.head == nil
 }
+
+// count the list
+func (list *LinkedList) Count() int {
+
+	// check there is any data in linked list
+	if list.IsEmpty() {
+		return 0
+	}
+
+	// initialize the count
+	count := 0
+
+	// temp node to store head
+	temp := list.head
+
+	// loop through the list
+	for temp.next != nil {
+		count++
+		temp = temp.next
+	}
+
+	// return the counter
+	return count
+}
