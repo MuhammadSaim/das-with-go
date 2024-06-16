@@ -118,6 +118,9 @@ func main() {
 	doublyLinkedList.InsertAtStart(4)
 	doublyLinkedList.InsertAtStart(5)
 
+	// count the list
+	fmt.Printf("Total node in the list are %d\n", doublyLinkedList.Count())
+
 	// display the list
 	doublyLinkedList.Display()
 
