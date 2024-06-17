@@ -88,3 +88,35 @@ func (list *LinkedList) Count() int {
 	// return the counter
 	return count
 }
+
+
+// find the node in list
+func (list *LinkedList) Find(index int) {
+
+	// check there is any data in linked list
+	if list.IsEmpty() {
+		fmt.Println("Ooops! There is no data to display. please insert the data.")
+		return
+	}
+
+	// get the count of the linked list
+	count := list.Count()
+
+	// check the count
+	if index > count {
+		fmt.Println("Ooops! index is not found.")
+		return
+	}
+
+	// current node to store head
+	current := list.head
+
+	// loop through the count
+	for range index {
+		current = current.next
+	}
+
+	// print the current value
+	fmt.Printf("So %d was found at index %d\n", current.value, index)
+
+}

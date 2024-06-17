@@ -26,3 +26,4 @@ This repository contains a simple implementation of a DSA in Go.
 - [InsertAtStart](./linkedlist/singly/singly.go#L19) - Insert a value at the beginning of the list.
 - [IsEmpty](./linkedlist/doubly/doubly.go#L64) - Check if the list is empty.
 - [Count](./linkedlist/doubly/doubly.go#L69) - Count the nodes in the list.
+- [Find](./linkedlist/doubly/doubly.go#L94) - Find the value by index in list.
