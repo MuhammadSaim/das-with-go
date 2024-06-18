@@ -121,6 +121,9 @@ func main() {
 	// count the list
 	fmt.Printf("Total node in the list are %d\n", doublyLinkedList.Count())
 
+	// find in list
+	doublyLinkedList.Find(3)
+
 	// display the list
 	doublyLinkedList.Display()
 
